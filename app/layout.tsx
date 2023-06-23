@@ -1,5 +1,12 @@
+'use client'
+
 import type { PropsWithChildren } from 'react'
+import { Layout } from 'antd'
+
+import 'antd/dist/reset.css'
 import { RootStyleRegistry } from '@/components/root-style-registry'
+import { TopHeader } from '@/components/header'
+import { Content } from 'antd/es/layout/layout'
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
@@ -11,7 +18,14 @@ export default function RootLayout({ children }: PropsWithChildren) {
         <link rel="icon" href="/favicon.png" />
       </head>
       <body>
-        <RootStyleRegistry>{children}</RootStyleRegistry>
+        <RootStyleRegistry>
+          <Layout className="layout">
+            <TopHeader />
+            <Content style={{ padding: '30px 50px' }}>
+              {children}
+            </Content>
+          </Layout>
+        </RootStyleRegistry>
       </body>
     </html>
   )
