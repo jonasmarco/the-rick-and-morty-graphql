@@ -4,8 +4,8 @@ import type { PropsWithChildren } from 'react'
 import { Layout } from 'antd'
 
 import 'antd/dist/reset.css'
-import { RootStyleRegistry } from '@/components/root-style-registry'
-import { TopHeader } from '@/components/header'
+import { RootStyleRegistry } from '@/components/RootStyleRegistry'
+import { Header } from '@/components/Header'
 import { Content } from 'antd/es/layout/layout'
 
 export default function RootLayout({ children }: PropsWithChildren) {
@@ -20,7 +20,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
       <body>
         <RootStyleRegistry>
           <Layout className="layout">
-            <TopHeader />
+            <Header />
             <Content style={{ padding: '30px 50px' }}>
               {children}
             </Content>

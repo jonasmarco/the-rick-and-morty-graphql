@@ -5,7 +5,7 @@ import Link from 'next/link'
 const { Search } = Input
 import * as S from './styled'
 
-export const TopHeader = () => {
+export const Header = () => {
   const { Header } = Layout;
 
   const menuItens = [
