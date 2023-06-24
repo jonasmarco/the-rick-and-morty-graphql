@@ -1,5 +1,10 @@
 {
-  "plugins": ["unused-imports"],
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "plugins": ["unused-imports", "prettier"],
   "rules": {
     "no-unused-vars": "off",
     "unused-imports/no-unused-imports": "error",
@@ -13,5 +18,8 @@
       }
     ]
   },
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:prettier/recommended"
+  ]
 }
