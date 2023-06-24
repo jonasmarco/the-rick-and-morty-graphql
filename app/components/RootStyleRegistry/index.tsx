@@ -11,7 +11,7 @@ export const RootStyleRegistry = ({ children }: PropsWithChildren) => {
     return (
       <script
         dangerouslySetInnerHTML={{
-          __html: `</script>${extractStyle(cache)}<script>`,
+          __html: `</script>${extractStyle(cache)}<script>`
         }}
       />
     )

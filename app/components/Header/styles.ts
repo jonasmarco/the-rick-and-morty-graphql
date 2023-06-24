@@ -9,8 +9,7 @@ export const ResponsiveTitle = styled(Col)`
   @media (min-width: 992px) {
     justify-content: flex-start;
   }
-`;
-
+`
 
 export const ResponsiveMenu = styled(Col)`
   display: flex;
@@ -20,5 +19,4 @@ export const ResponsiveMenu = styled(Col)`
   @media (min-width: 992px) {
     justify-content: flex-end;
   }
-`;
-
+`
