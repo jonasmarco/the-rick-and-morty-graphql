@@ -25,19 +25,19 @@ export default function Home() {
     loading: charactersLoading,
     error: charactersError,
     data: charactersData
-  } = useQuery(GET_CHARACTERS)
+  } = useQuery(GET_CHARACTERS, { variables: { page: 1 } })
 
   const {
     loading: episodesLoading,
     error: episodesError,
     data: episodesData
-  } = useQuery(GET_EPISODES)
+  } = useQuery(GET_EPISODES, { variables: { page: 1 } })
 
   const {
     loading: locationsLoading,
     error: locationsError,
     data: locationsData
-  } = useQuery(GET_LOCATIONS)
+  } = useQuery(GET_LOCATIONS, { variables: { page: 1 } })
 
   React.useEffect(() => {
     if (charactersError || episodesError || locationsError) {

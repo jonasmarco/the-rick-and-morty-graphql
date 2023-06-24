@@ -1,8 +1,11 @@
 import { gql } from '@apollo/client'
 
 export const GET_CHARACTERS = gql`
-  query {
-    characters {
+  query ($page: Int!) {
+    characters(page: $page) {
+      info {
+        count
+      }
       results {
         name
         image

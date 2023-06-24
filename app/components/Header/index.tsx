@@ -8,7 +8,7 @@ import * as S from './styles'
 export const Header = () => {
   const { Header } = Layout
 
-  const menuItens = [
+  const menuItems = [
     {
       key: '/',
       label: 'Home'
@@ -20,6 +20,10 @@ export const Header = () => {
     {
       key: 'episodes',
       label: 'Episodes'
+    },
+    {
+      key: 'locations',
+      label: 'Locations'
     }
   ]
 
@@ -43,7 +47,7 @@ export const Header = () => {
         </Col>
         <S.ResponsiveMenu xs={24} lg={8}>
           <Menu theme="dark" mode="horizontal">
-            {menuItens.map((item) => (
+            {menuItems.map((item) => (
               <Menu.Item key={item.key}>
                 <Link href={`/${item.key}`}>{item.label}</Link>
               </Menu.Item>
