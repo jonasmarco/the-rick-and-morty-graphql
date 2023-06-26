@@ -1,3 +1,5 @@
+import { Episode } from './Episode'
+
 export type Character = {
   id: number
   name: string
@@ -8,7 +10,7 @@ export type Character = {
   origin: Record<string, any>
   location: Record<string, any>
   image: string
-  episode: string[]
+  episode: Episode[]
   url: string
   created: string
 }

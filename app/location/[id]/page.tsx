@@ -9,15 +9,15 @@ import { useParams } from 'next/navigation'
 import Link from 'next/link'
 
 import { useQuery } from '@apollo/client'
-import { Episode } from '@/interfaces/Episode'
+import { Location } from '@/interfaces/Location'
 import { Character } from '@/interfaces/Character'
-import { GET_EPISODE } from '@/queries/get_episode'
+import { GET_LOCATION } from '@/queries/get_location'
 
-const Episode = () => {
+const Location = () => {
   const params = useParams()
   const id = params.id
 
-  const { loading, error, data } = useQuery(GET_EPISODE, {
+  const { loading, error, data } = useQuery(GET_LOCATION, {
     variables: { id }
   })
 
@@ -29,25 +29,25 @@ const Episode = () => {
 
   if (loading) return <Spin size="large" />
 
-  const episode: Episode = data.episode
+  const location: Location = data.location
 
   return (
     <Space direction="vertical" style={{ width: '100%' }} size="large">
-      <Title>{episode.name}</Title>
+      <Title>{location.name}</Title>
 
       <Text>
-        <strong>Air Date:</strong> {episode.air_date}
+        <strong>Type:</strong> {location.type}
       </Text>
       <Text>
-        <strong>Episode:</strong> {episode.episode}
+        <strong>Dimension:</strong> {location.dimension}
       </Text>
       <Text>
-        <strong>Characters:</strong> {episode.characters.length}
+        <strong>Residents:</strong> {location.residents.length}
       </Text>
 
-      <Title level={3}>Character List:</Title>
+      <Title level={3}>Residents List:</Title>
       <Row gutter={[16, 16]}>
-        {episode.characters.map((character: Character, index: number) => (
+        {location.residents.map((character: Character, index: number) => (
           <Col key={index}>
             <Link href={`/character/${character.id}`} passHref>
               <Badge count={character.name} />
@@ -59,4 +59,4 @@ const Episode = () => {
   )
 }
 
-export default Episode
+export default Location

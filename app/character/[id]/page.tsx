@@ -10,6 +10,7 @@ import { useParams } from 'next/navigation'
 import Link from 'next/link'
 
 import { useQuery } from '@apollo/client'
+import { Character } from '@/interfaces/Character'
 import { Episode } from '@/interfaces/Episode'
 import { GET_CHARACTER } from '@/queries/get_character'
 
@@ -29,7 +30,7 @@ const Character = () => {
 
   if (loading) return <Spin size="large" />
 
-  const character = data.character
+  const character: Character = data.character
 
   return (
     <Space direction="vertical" style={{ width: '100%' }} size="large">
