@@ -7,7 +7,7 @@ import { Character } from '@/interfaces/Character'
 
 const CharacterCard = (character: Character) => {
   return (
-    <Link href={`/character/${character.id}`}>
+    <Link href={`/character/${character.id}`} style={{ width: '100%' }}>
       <Card
         hoverable
         style={{ height: '100%', width: '100%' }}
