@@ -44,6 +44,7 @@ const LocationsList = () => {
           current={page}
           onChange={(page) => setPage(page)}
           total={totalLocations}
+          pageSize={20}
           showSizeChanger={false}
           style={{ textAlign: 'center', marginTop: '2em' }}
         />

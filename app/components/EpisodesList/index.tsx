@@ -44,6 +44,7 @@ const EpisodesList = () => {
           current={page}
           onChange={(page) => setPage(page)}
           total={totalEpisodes}
+          pageSize={20}
           showSizeChanger={false}
           style={{ textAlign: 'center', marginTop: '2em' }}
         />

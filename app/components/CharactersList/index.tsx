@@ -44,6 +44,7 @@ const CharactersList = () => {
           current={page}
           onChange={(page) => setPage(page)}
           total={totalCharacters}
+          pageSize={20}
           showSizeChanger={false}
           style={{ textAlign: 'center', marginTop: '2em' }}
         />

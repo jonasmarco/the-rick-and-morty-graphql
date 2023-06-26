@@ -9,8 +9,7 @@ const LocationCard = (location: Location) => {
     <Link
       href={`/location/${location.id}`}
       style={{
-        display: 'flex',
-        alignItems: 'stretch',
+        height: '100%',
         width: '100%'
       }}
     >

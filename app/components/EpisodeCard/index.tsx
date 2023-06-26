@@ -9,8 +9,7 @@ const EpisodeCard = (episode: Episode) => {
     <Link
       href={`/episode/${episode.id}`}
       style={{
-        display: 'flex',
-        alignItems: 'stretch',
+        height: '100%',
         width: '100%'
       }}
     >
