@@ -2,6 +2,7 @@
   "name": "the-rick-and-morty-graphql",
   "version": "0.1.0",
   "private": true,
+  "user": "https://github.com/jonasmarco",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
