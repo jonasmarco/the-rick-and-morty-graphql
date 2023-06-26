@@ -2,10 +2,13 @@
 
 import { Layout, Menu, Input, Row, Col } from 'antd'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 const { Search } = Input
 import * as S from './styles'
 
 export const Header = () => {
+  const router = useRouter()
+
   const { Header } = Layout
 
   const menuItems = [
@@ -42,7 +45,7 @@ export const Header = () => {
         <Col xs={24} lg={8} style={{ display: 'flex', alignItems: 'center' }}>
           <Search
             placeholder="Search characters"
-            onSearch={() => console.log('searching')}
+            onSearch={(term) => router.push(`/search/${term}`)}
           />
         </Col>
         <S.ResponsiveMenu xs={24} lg={8}>

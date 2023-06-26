@@ -1,5 +1,5 @@
-import { Card } from 'antd'
-const { Meta } = Card
+import { Card, Typography } from 'antd'
+const { Title } = Typography
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -23,7 +23,9 @@ const CharacterCard = (character: Character) => {
           />
         }
       >
-        <Meta title={character.name} style={{ marginBottom: '1em' }} />
+        <Title level={5} style={{ marginBottom: '1em' }}>
+          {character.name}
+        </Title>
         <p>Status: {character.status}</p>
         <p>
           Gender: {character.gender} - {character.species}
