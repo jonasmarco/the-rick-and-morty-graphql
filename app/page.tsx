@@ -16,7 +16,7 @@ import { Character } from '@/interfaces/Character'
 import { Episode } from '@/interfaces/Episode'
 import { Location } from '@/interfaces/Location'
 
-import { GET_CHARACTERS } from '@/queries/get_character'
+import { GET_CHARACTERS } from '@/queries/get_characters'
 import { GET_EPISODES } from '@/queries/get_episodes'
 import { GET_LOCATIONS } from '@/queries/get_locations'
 

@@ -9,9 +9,7 @@ import Container from '@/components/Container'
 import LocationCard from '@/components/LocationCard'
 
 import { useQuery } from '@apollo/client'
-
 import { Location } from '@/interfaces/Location'
-
 import { GET_LOCATIONS } from '@/queries/get_locations'
 
 const LocationsList = () => {

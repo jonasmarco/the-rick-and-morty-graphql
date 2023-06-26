@@ -9,10 +9,8 @@ import Container from '@/components/Container'
 import CharacterCard from '@/components/CharacterCard'
 
 import { useQuery } from '@apollo/client'
-
 import { Character } from '@/interfaces/Character'
-
-import { GET_CHARACTERS } from '@/queries/get_character'
+import { GET_CHARACTERS } from '@/queries/get_characters'
 
 const CharactersList = () => {
   const [page, setPage] = React.useState(1)

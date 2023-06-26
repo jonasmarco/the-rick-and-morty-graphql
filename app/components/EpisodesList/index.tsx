@@ -9,9 +9,7 @@ import Container from '@/components/Container'
 import EpisodeCard from '@/components/EpisodeCard'
 
 import { useQuery } from '@apollo/client'
-
 import { Episode } from '@/interfaces/Episode'
-
 import { GET_EPISODES } from '@/queries/get_episodes'
 
 const EpisodesList = () => {
