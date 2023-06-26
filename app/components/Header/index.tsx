@@ -39,7 +39,7 @@ export const Header = () => {
           style={{ display: 'flex', alignItems: 'center' }}
         >
           <h1 style={{ color: 'white', marginBottom: '0' }}>
-            The Rick and Morty GraphQL
+            Rick and Morty GraphQL
           </h1>
         </S.ResponsiveTitle>
         <Col xs={24} lg={8} style={{ display: 'flex', alignItems: 'center' }}>

@@ -7,6 +7,7 @@ import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client'
 import 'antd/dist/reset.css'
 import { RootStyleRegistry } from '@/components/RootStyleRegistry'
 import { Header } from '@/components/Header'
+import CustomFooter from '@/components/Footer'
 import { Content } from 'antd/es/layout/layout'
 
 const RICK_AND_MORTY_API = 'https://rickandmortyapi.com/graphql'
@@ -33,6 +34,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
               <Content style={{ padding: '2.143em 3.571em' }}>
                 {children}
               </Content>
+              <CustomFooter />
             </Layout>
           </RootStyleRegistry>
         </ApolloProvider>
